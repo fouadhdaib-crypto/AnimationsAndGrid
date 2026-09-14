@@ -17,7 +17,7 @@
         :root {
               
                 --primary: #6c5ce7; 
-                --secondary: #00cec9; 
+                --secondary: #ff9800; 
                 --accent: #fd79a8;
                 --dark: #0d0d1a; /* Page background */
                 --light: #f4f4f8; /*Text on dark background */
@@ -94,16 +94,35 @@
                 
                 .Plants_grid{
                         display: grid;
-                        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+                        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
                         max-width: 1100;
                         gap: 19px;
 
                 }
                 .plant_card{
                     border: #2a2b2b4f solid 1px;
+                    background-color: rgba(255, 174, 0, 0.02);
+                    height: 300PX;
+                    width: 300PX;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
 
                     
                 }
+               .plant_card:hover {
+                    transform: translateY(-6px);
+                    border-color: #ffb300;
+                    background: linear-gradient(
+                        145deg,
+                        rgba(255, 213, 74, 0.12),
+                        rgba(255, 152, 0, 0.06)
+                    );
+                    box-shadow:
+                        0 10px 30px rgba(0, 0, 0, 0.4),
+                        0 0 25px rgba(255, 179, 0, 0.2);
+                    }
                 .bento_Item{}
 
                 @keyframes FLOAT{
@@ -111,7 +130,7 @@
                         transform: translateY(0);
                     }
                     50%{
-                        transform: translateX(40px);
+                        transform: translateY(40px);
                     }
                     100%{
                         transform: translate(0);
@@ -120,20 +139,166 @@
 
                 .hero{
                     position: relative;
+                    display: flex;
                     padding: var(--p-2);
                     text-align: center;
-                    background: radial-gradient(circle at top ,#42b4ac , #0d0d1a );
+                    background: radial-gradient(circle at top ,#1a1a3a , var(--dark) );
+                    height: 300px;
+                    justify-content: center;
+                    align-items: center;
+                   
+                
                 }
                 .orb{
 
                     position: absolute;
                     border-radius: 50%;
-                    background-color: var(--light);
+                  background: radial-gradient(circle at top, #FFB300, #FF6F00, var(--dark));    
                     animation: FLOAT 4s ease-in-out infinite ;
-                    width: 50px;
-                    height: 50px;
-                    opacity: 0.5;
+                    width: 100px;
+                    height: 100px;
+                      filter: blur(4px);
+                    opacity: 0.3;
+                    left: 50%;
+                    
+                  
                 }
+                .btn {
+                        padding: 12px 24px;
+                        border: none;
+                        border-radius: 10px;
+                        background: linear-gradient(135deg, #ffd54a, #ff9800);
+                        color: #151515;
+                        font-size: 16px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.25s ease;
+                        box-shadow: 0 4px 15px rgba(255, 174, 0, 0.25);
+
+                }
+                .card1{
+                    width: 100px;
+                    height: 100px;
+                    background: radial-gradient(circle at top, #E0E0E0, #757575, #151515);
+                    filter: blur(4px);
+                    border-radius: 50%;
+                }
+                .card2{
+                    width: 100px;
+                    height: 100px;
+                    background: radial-gradient(circle at top, #FFB300, #FF6F00, var(--dark)); 
+                    filter: blur(4px);
+                    border-radius: 50%;
+                }
+                .card3{
+                    width: 100px;
+                    height: 100px;
+                   background: radial-gradient(circle at top, #4FC3F7, #1565C0, #0B1D33);
+                    filter: blur(4px);
+                    border-radius: 50%;
+                }
+                .card4{
+                    width: 100px;
+                    height: 100px;
+                    background: radial-gradient(circle at top, #FF7043, #C62828, #2B0D0D); 
+                    filter: blur(4px);
+                    border-radius: 50%;
+                }
+                .card5{
+                    width: 100px;
+                    height: 100px;
+                    background: radial-gradient(circle at top, #E0E0E0, #757575, #151515);
+                    filter: blur(4px);
+                    border-radius: 50%;
+                }
+                .card6{
+                    width: 100px;
+                    height: 100px;
+                   background: radial-gradient(circle at top, #80DEEA, #26A69A, #062B30);
+                    filter: blur(4px);
+                    border-radius: 50%;
+                }
+                span{
+                    color: #00cec9;
+                }
+                .btno{
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    grid-template-rows: repeat(4,200px);
+                    max-width: 1000px;
+                    margin: 0 auto;
+                   font-weight: 600;
+                    gap: 10px;
+                    
+                }
+                .bento_Item{
+
+                    border: solid 1px #69686838;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .Fteure{
+                    grid-column: 1/3;
+                    grid-row: 1/3;
+                    background: radial-gradient(
+                    circle at top right,
+                    #3F51B5,
+                    #172554 45%,
+                    var(--dark) 100%
+    );
+
+                }
+                .Stations{
+                    grid-column: 3/5;
+                }
+                .wide{
+                    grid-column: 3/5;
+                }
+                .bento_Item:hover{
+
+                      transform: translateY(-6px);
+                    border-color: #ffb300;
+                    background: linear-gradient(
+                        145deg,
+                        rgba(255, 213, 74, 0.12),
+                        rgba(255, 152, 0, 0.06)
+                    );
+                    box-shadow:
+                        0 10px 30px rgba(0, 0, 0, 0.4),
+                        0 0 25px rgba(255, 179, 0, 0.2);
+                    
+                }
+                .stat{
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+                .stat div{
+                    width: 200px;
+                    height: 200px;
+                      background: radial-gradient(
+                    circle at top right,
+                    #3F51B5,
+                    #172554 45%,
+                    var(--dark) 100%);
+                    color: white;
+                    font-weight: 700;
+
+                }
+                
+                .site-footer {
+                text-align: center;
+                padding: var(--p-3);
+                background-color: rgba(0, 0, 0, 0.4);
+                color: #9a9ac0;
+                }
+
+
 
     </style>
 </head>
@@ -251,18 +416,18 @@
 
 
 <section id="nento" class="Bento_secion">
+
+    <h2>Mission Highlights</h2>
+    <div class="btno">
     <div class="bento_Item Fteure">
-        <h3>my nam is fuad </h3>
-
-        <p>one piece is real</p>
-
-
-
+        <h3>Deep Space </h3>
+        <p>Telescopes now see galaxies billions of years old</p>
     </div>
     <div class="bento_Item">Rovers</div>
-    <div class="bento_Item"> satlite</div>
-    <div class="bento_Item">system</div>
-    <div class="bento_Item str">system</div>
+    <div class="bento_Item"> Launhc Systems</div>
+    <div class="bento_Item wide">Sattellites</div>
+    <div class="bento_Item Stations">Stations</div>
+    </div>
 
 
 
@@ -275,18 +440,17 @@
 
 <section id="stat" class="stat">
 
-    <div class="state"><strong><span></span></strong></div>
-    <div class="state"><strong><span></span></strong></div>
-    <div class="state"><strong><span></span></strong></div>
-    <div class="state"><strong><span></span></strong></div>
+      <div class="stat"><strong>8</strong><span>Planets</span></div>
+        <div class="stat"><strong>200+</strong><span>Moons</span></div>
+        <div class="stat"><strong>1</strong><span>Star</span></div>
+        <div class="stat"><strong>4.6B</strong><span>Years Old</span></div>
     
 </section>
     </main>
 
-    <footer class="ftr">
-
-
-         
+   <footer class="site-footer">
+      <p>Spaec Explorer, a CSS training demo</p>
+      <p>&copy; 2026</p>
     </footer>
     
 </body>
